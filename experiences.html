@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="AlizéeT"
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 2rem;
+            background-color: #fff;
+            min-height: 400px;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+        }
+		
+#experiences {
+    padding: 2rem 1rem;
+}
+
+.experience {
+    margin-bottom: 2rem;
+}
+
+.experience h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.experience p {
+    margin: 0.2rem 0;
+}
+
+.texte-gris {
+    color: gray;
+}
+
+#btnAccueil {
+  background-color: #333;       
+  color: white;                 
+  border: 2px solid white;      
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#btnAccueil:hover {
+  background-color: #555;       
+  transform: scale(1.05);
+}
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1 style="text-align: center;">EXPERIENCES</h1>
+    <nav style="display: flex; justify-content: space-between; align-items: center; padding: 0 40px;">
+        <!-- Partie gauche : nom -->
+		
+		<ul style="list-style: none; margin: 0; padding: 0;">
+            <li style= "font-weight: bold;">TIHON
+			<span style="color: fuchsia;">Alizée</span></li>
+        </ul>
+      
+
+        <!-- Partie droite : menu -->
+        <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
+            <li><a href="à propos.html">À propos</a></li>
+            <li><a href="education.html">Éducation</a></li>
+            <li><a href="langues.html">Langues</a></li>
+            <li><a href="experiences.html">Expériences</a></li>
+        </ul>
+    </nav>
+</header>
+	
+	<main>
+	    <section id="experiences">
+		
+   <p style="text-align: center; margin-bottom: 2rem; font-size: 1.3rem; " class="texte-gris">Dans cette section, vous retrouverez un historique de mes expériences  
+	ordonnées de la plus récente à la plus ancienne.</p>
+
+    <div class="experience">
+        <h3><strong>Volontariat</strong></h3>
+        <p><em>Chili,Argentine,Uruguay Workaway – 03/12/2024 –13/03/2025</em></p>
+        <p>Travail dans des fermes écologiques et dans des familles</p>
+    </div>
+
+    <div class="experience">
+        <h3><strong>Transcripteuse</strong></h3>
+        <p><em>LaDisco (Université Libre de Bruxelles)– 09/08/2024 – 15/09/2024</em></p>
+        <p>Transcriptiond’interviews</p>
+    </div>
+
+    <div class="experience">
+        <h3><strong>Assistante de Recherche</strong></h3>
+        <p><em>Autisme en Contexte,Théorie et Expérience(ACTE)– ULB – 17/10/2023 – 16/08/2024 </em></p>
+        <p>Codage – Aide au testing et au recrutement – Analyse de productions linguistiques avec le logiciel Praat</p>
+    </div>
+
+    <div class="experience">
+        <h3><strong>Assistante Administrative</strong></h3>
+        <p><em>Institut des Sciences Naturelles de Bruxelles – Août 2024</em></p>
+        <p>Géolocalisation avec Qgis – Travail administratif</p>
+    </div>
+
+    <div class="experience">
+        <h3><strong>Analyste</strong></h3>
+        <p><em>Belgian Language in Autism Study (BeLAS)– 03/2024 – 07/2024</em></p>
+        <p>Gestion de dossiers étudiants, accueil téléphonique, rédaction de courriers administratifs.</p>
+    </div>
+
+    <div class="experience">
+        <h3><strong>Assistante Administrative et Traductrice</strong></h3>
+        <p><em> Institut des Sciences Naturelles de Bruxelles (CEBioS)– Août 2023</em></p>
+        <p>Relecture, correction et traduction d’articles – Géolocalisation – travail administratif</p>
+    </div>
+
+    <div class="experience">
+        <h3><strong>Stage Manager</strong></h3>
+        <p><em>International Pragmatics Association (IPrA) – 09/07/2023 – 14/07/2023</em></p>
+        <p><p>
+    </div>
+
+    <div class="experience">
+        <h3><strong>Assistante Administrative et Traductrice</strong></h3>
+        <p><em>Institut des Sciences Naturelles de Bruxelles (CEBioS) – Août 2022</em></p>
+        <p>Traduction du site Web de CEBios – Travail Administratif – Numérisation pour le Fond Leopold III</p>
+    </div>
+</section>
+	</main>
+
+<button onclick="retourAccueil()" id="btnAccueil">Retour à l'accueil</button>
+	
+     <footer>
+         <p>&copy; 2025 disigned by Alizée TIHON with HTML, CSS, JS Tous droits réservés.</p>>
+    </footer>
+
+<script>
+  function retourAccueil() {
+    // Animation rapide avant de rediriger
+    const btn = document.getElementById('btnAccueil');
+    btn.style.transform = "scale(0.95)";
+    btn.style.backgroundColor = "#444";
+
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 200);
+  }
+</script>
+
+
+</body>
+</html>

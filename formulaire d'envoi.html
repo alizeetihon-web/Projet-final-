@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulaire de Contact</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      background-color: fuchsia;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: deeppink;
+    }
+
+    #message {
+      margin-top: 1rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: #fff;
+      margin-top: 3rem;
+    }
+
+
+#btnAccueil {
+  background-color: #333;       
+  color: white;                 
+  border: 2px solid white;      
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#btnAccueil:hover {
+  background-color: #555;       
+  transform: scale(1.05);
+}
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align: center;">Contactez-moi</h1>
+
+  <form id="contactForm">
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="messageText">Message :</label>
+    <textarea id="messageText" name="messageText" rows="5" required></textarea>
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <div id="message"></div>
+
+<button onclick="retourAccueil()" id="btnAccueil">Retour à l'accueil</button>
+
+  <footer>
+    <p>&copy; 2025 designed by Alizée TIHON with HTML, CSS, JS. Tous droits réservés.</p>
+  </footer>
+ 
+ 
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Empêche le rechargement
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const messageText = document.getElementById('messageText').value.trim();
+      const messageDiv = document.getElementById('message');
+
+      if (name === '' || email === '' || messageText === '') {
+        messageDiv.style.color = 'red';
+        messageDiv.textContent = 'Veuillez remplir tous les champs.';
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        messageDiv.style.color = 'red';
+        messageDiv.textContent = 'Veuillez saisir une adresse email valide.';
+        return;
+      }
+
+      messageDiv.style.color = 'green';
+      messageDiv.textContent = 'Merci, votre message a bien été envoyé !';
+
+      this.reset(); 
+    });
+	
+  function retourAccueil() {
+    const btn = document.getElementById('btnAccueil');
+    btn.style.transform = "scale(0.95)";
+    btn.style.backgroundColor = "#444";
+
+    setTimeout(() => {
+      window.location.href = "index";
+    }, 200);
+  }
+</script>
+  </script>
+
+</body>
+</html>
